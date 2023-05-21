@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 const db = require('./config.js/db')
 const docRouter = require('./routes/Doctor')
 const patRouter = require('./routes/Patient')
+const repRouter = require('./routes/Report')
 dotenv.config()
 const port = process.env.PORT
 
@@ -17,5 +18,6 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.use('/doctors', docRouter)
 app.use('/patients', patRouter)
+app.use('/reports', repRouter)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

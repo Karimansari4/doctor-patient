@@ -180,6 +180,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:4000/reports/Negative",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/reports/Negative",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reports",
+						"Negative"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
