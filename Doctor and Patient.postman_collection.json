@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "21e264c6-44f4-49da-8df5-d4aac3191738",
+		"name": "Doctor and Patient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/doctors/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Raju Shaiad\",\r\n    \"email\": \"raju@gmail.com\",\r\n    \"password\": \"raju@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/doctors/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"doctors",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/doctors/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"raju@gmail.com\",\r\n    \"password\": \"raju@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/doctors/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"doctors",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/patients/646a5a7cdcab6ffc2a15e2f5/create-report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiX2lkIjoiNjQ2YTA0YTVkZjNmMzA5MzMwODhiZjhiIiwibmFtZSI6IlJhanUgU2hhaWFkIiwiZW1haWwiOiJyYWp1QGdtYWlsLmNvbSJ9LCJpYXQiOjE2ODQ2NzAyODYsImV4cCI6MTY4NTI3NTA4Nn0.oiyq9Rm_kqwnLvdk0J1PCR7dkgYH-6xFpXWyPS_UMDo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"drName\": \"Raju Shaiad\",\r\n    \"status\": \"Travelled-Quarantine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/patients/646a5a7cdcab6ffc2a15e2f5/create-report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"patients",
+						"646a5a7cdcab6ffc2a15e2f5",
+						"create-report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/patients/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiX2lkIjoiNjQ2YTA0YTVkZjNmMzA5MzMwODhiZjhiIiwibmFtZSI6IlJhanUgU2hhaWFkIiwiZW1haWwiOiJyYWp1QGdtYWlsLmNvbSJ9LCJpYXQiOjE2ODQ2NzAyODYsImV4cCI6MTY4NTI3NTA4Nn0.oiyq9Rm_kqwnLvdk0J1PCR7dkgYH-6xFpXWyPS_UMDo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"jabir\",\r\n    \"mobile\": 4569871569\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/patients/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"patients",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/patients/646a5a7cdcab6ffc2a15e2f5/all-reports",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiX2lkIjoiNjQ2YTA0YTVkZjNmMzA5MzMwODhiZjhiIiwibmFtZSI6IlJhanUgU2hhaWFkIiwiZW1haWwiOiJyYWp1QGdtYWlsLmNvbSJ9LCJpYXQiOjE2ODQ2NzAyODYsImV4cCI6MTY4NTI3NTA4Nn0.oiyq9Rm_kqwnLvdk0J1PCR7dkgYH-6xFpXWyPS_UMDo",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/patients/646a5a7cdcab6ffc2a15e2f5/all-reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"patients",
+						"646a5a7cdcab6ffc2a15e2f5",
+						"all-reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/patients/Negative",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/patients/Negative",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"patients",
+						"Negative"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
