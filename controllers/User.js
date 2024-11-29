@@ -3,21 +3,21 @@ const User = require("../models/User")
 
 
 exports.register = async (req, res) => {
-    const fname = req.body.fname
-    const mname = req.body.mname
-    const lname = req.body.lname
-    const mobile = req.body.mobile
+    const fname = req.body.name
+    const mname = req.body.middleName
+    const lname = req.body.lastName
+    const mobile = req.body.contact
     const email = req.body.email
     const dob = req.body.dob
-    const memborShip = req.body.memborShip
+    const memborShip = req.body.membershipNo
     const gender = req.body.gender
     const tShirtSize = req.body.tShirtSize
-    const sport = req.body.sport
+    const sport = req.body.sports
     const category = req.body.category
     const bloodGroup = req.body.bloodGroup
-    const illens = req.body.illens
-    const idPick = req.body.idPick
-    const participantPic = req.body.participant
+    const illens = req.body.illness
+    const idPick = req.body.idPicture
+    const participantPic = req.body.participantPicture
 
     try {
         const checkUser = await User.findOne({ $or: [{ email: email, mobile: mobile }] })
