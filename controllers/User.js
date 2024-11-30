@@ -3,6 +3,10 @@ const User = require("../models/User")
 
 
 exports.register = async (req, res) => {
+    console.log("=================================== register =======================================");
+    console.log("req.body: ", req.body);
+
+
     const fname = req.body.name
     const mname = req.body.middleName
     const lname = req.body.lastName
