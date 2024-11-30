@@ -3,8 +3,8 @@ const User = require("../models/User")
 
 
 exports.register = async (req, res) => {
-    console.log("=================================== register =======================================");
-    console.log("req.body: ", req.body);
+    // console.log("=================================== register =======================================");
+    // console.log("req.body: ", req.body);
 
 
     const fname = req.body.name
@@ -22,15 +22,16 @@ exports.register = async (req, res) => {
     const illens = req.body.illness
     const idPick = req.body.idPicture
     const participantPic = req.body.participantPicture
+    const guardianName = req.body?.guardianName
 
     try {
         const checkUser = await User.findOne({ $or: [{ email: email, mobile: mobile }] })
         if (checkUser) {
             return res.status(400).json({ msg: 'User already exist! Please change mobile number or email id.', success: false })
         }
-        const result = await User.create({ fname, mname, lname, mobile, email, dob, memborShip, gender, tShirtSize, sport, category, bloodGroup, illens, idPick, participantPic })
+        const result = await User.create({ fname, mname, lname, mobile, email, dob, memborShip, gender, tShirtSize, sport, category, bloodGroup, illens, idPick, participantPic, guardianName: guardianName })
         if (result) {
-            return res.status(200).json({ msg: 'User created successfully.', success: true, result: result })
+            return res.status(200).json({ msg: 'Thank You for registering to the Malabar Hill Club Sports League.', success: true, result: result })
         }
         return res.status(400).json({ msg: 'User creation failed!', success: false })
     } catch (error) {

@@ -52,6 +52,9 @@ const UserSchema = new mongoose.Schema({
     },
     participantPic: {
         type: String
+    },
+    guardianName: {
+        type: String
     }
 
 }, { timestamps: true })
